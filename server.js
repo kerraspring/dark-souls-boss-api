@@ -98,8 +98,8 @@ const bosses = {
     }
 }
 
-app.listen(PORT, function() {
-    console.log('listening')
+app.listen(process.env.PORT || PORT, function() {
+    console.log(`running on port ${PORT}`)
 })
 
 app.get('/', (req, res) => {

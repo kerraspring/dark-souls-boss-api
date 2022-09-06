@@ -5,6 +5,23 @@ const PORT = 5000
 
 app.use(cors())
 
+app.listen(process.env.PORT || PORT, function() {
+    console.log(`running on port ${PORT}`)
+})
+
+app.get('/', (req, res) => {
+    res.sendFile(__dirname + '/index.html')
+})
+
+app.get('/api/:boss', (req, res) => {
+    const bossName = req.params.boss.toLowerCase()
+    if(bosses[bossName]){
+        res.json(bosses[bossName])
+    }else{
+        res.json(bosses['unknown'])
+    }
+})
+
 const bosses = {
     'asylum demon': {
         location: 'Northern Undead Asylum',
@@ -100,20 +117,3 @@ const bosses = {
         possibleDrops: 'unknown'
     }
 }
-
-app.listen(process.env.PORT || PORT, function() {
-    console.log(`running on port ${PORT}`)
-})
-
-app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/index.html')
-})
-
-app.get('/api/:boss', (req, res) => {
-    const bossName = req.params.boss.toLowerCase()
-    if(bosses[bossName]){
-        res.json(bosses[bossName])
-    }else{
-        res.json(bosses['unknown'])
-    }
-})

@@ -1,0 +1,4 @@
+for UI:
+list of buttons with boss names
+    -on click:
+        drops down/expands to show location,drops,etc

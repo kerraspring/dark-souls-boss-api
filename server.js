@@ -51,10 +51,20 @@ const bosses = {
         drops: '6,000 souls, Key to Depths, 1 Humanity, 1 Homeward Bone',
         possibleDrops: 'Demon Great Machete'
     },
+    'ceaseless': {
+        name: 'Ceaseless Discharge',
+        location: 'Demon Ruins',
+        drops: '20,000 souls, 1 Humanity, 1 Homeward Bone'
+    },
     'centipede': {
         name: 'Centipede Demon',
         location: 'Demon Ruins',
         drops: '40,000 souls, Orange Charred Ring, 1 Humanity, 1 Homeward Bone'
+    },
+    'quelaag': {
+        name: 'Chaos Witch Quelaag',
+        location: 'Blighttown',
+        drops: '20,000 Soul, Soul of Quelaag, 1 Twin Humanities'
     },
     'priscilla': {
         name: 'Crossbreed Priscilla',
